@@ -32,30 +32,35 @@ const divisions = [
 
 const spotlightSlides = [
   {
-    image: pexelsImages.nigeriaUrban[0],
-    title: "Built for Nigerian Business Visibility",
-    caption: "Premium web identity for aviation, energy, and engineering ventures operating in Nigerian markets.",
+    image: "https://images.pexels.com/photos/36093857/pexels-photo-36093857.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    title: "Nigerian Aviation Ground Presence",
+    caption: "Flight operations visuals aligned to local market positioning and premium service delivery.",
   },
   {
-    image: pexelsImages.nigeriaUrban[1],
-    title: "Multi-Venture Ecosystem, One Strong Presence",
-    caption: "Unified structure helps clients quickly understand services and trust delivery capability.",
+    image: "https://images.pexels.com/photos/8394305/pexels-photo-8394305.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    title: "Local Media Production Capability",
+    caption: "Camera-led project storytelling for stronger brand visibility and trusted communication.",
   },
   {
-    image: pexelsImages.nigeriaUrban[2],
-    title: "Credibility + Conversion in One Experience",
-    caption: "High-quality visuals, clear calls to action, and modern interface motion built for lead generation.",
+    image: "https://images.pexels.com/photos/9875405/pexels-photo-9875405.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    title: "Practical Solar Installation Teams",
+    caption: "Hands-on solar deployment visuals that reflect realistic delivery in African environments.",
+  },
+  {
+    image: "https://images.pexels.com/photos/34865651/pexels-photo-34865651.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    title: "Cockpit-Level Aviation Professionalism",
+    caption: "Operational clarity, safety discipline, and premium execution from planning to dispatch.",
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      <section className="section-wrap pb-8">
-        <div className="relative overflow-hidden rounded-3xl border border-brand-gold/35 bg-[#041333] shadow-[0_30px_100px_-45px_rgba(45,91,255,0.9)]">
-          <Image src="/brand/hero.jpg" alt="Airplane on royal blue background" fill priority sizes="100vw" className="object-cover object-right" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#041333f2] via-[#041333db] to-transparent" />
-          <div className="relative z-10 max-w-2xl p-7 sm:p-10 lg:p-14">
+      <section className="relative w-full min-h-[72vh] overflow-hidden">
+        <Image src="/brand/hero.jpg" alt="Airplane on royal blue background" fill priority sizes="100vw" className="object-cover object-right" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#02060df5] via-[#041333d4] to-transparent" />
+        <div className="relative z-10 mx-auto flex min-h-[72vh] w-full max-w-6xl items-center px-4 py-16 sm:px-6 lg:px-10">
+          <div className="max-w-2xl">
             <p className="kicker">Premium Aviation Experience</p>
             <h1 className="mt-4 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
               The Best Aviation Services Available To You.
