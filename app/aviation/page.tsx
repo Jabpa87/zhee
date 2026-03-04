@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ImageStrip } from "@/components/ImageStrip";
 import { PageHero } from "@/components/PageHero";
+import { ShowcaseSlider } from "@/components/ShowcaseSlider";
 import { pexelsImages } from "@/lib/site-data";
 
 const services = [
@@ -18,6 +18,24 @@ const services = [
   },
 ];
 
+const aviationSlides = [
+  {
+    image: pexelsImages.aviation[0],
+    title: "Aviation Reliability",
+    caption: "Operational discipline and client trust positioned with premium visual storytelling.",
+  },
+  {
+    image: pexelsImages.aviation[1],
+    title: "Mission-Ready Coordination",
+    caption: "Service scope is clearly explained for charter clients and corporate travel teams.",
+  },
+  {
+    image: pexelsImages.aviation[2],
+    title: "High-Value Brand Presence",
+    caption: "Website design communicates professionalism before the first meeting.",
+  },
+];
+
 export default function AviationPage() {
   return (
     <>
@@ -31,10 +49,12 @@ export default function AviationPage() {
         imageAlt="Aircraft operations"
       />
 
+      <ShowcaseSlider slides={aviationSlides} label="Aviation Showcase" />
+
       <section className="section-wrap pt-4">
         <div className="grid gap-4 md:grid-cols-3">
-          {services.map((service) => (
-            <article key={service.title} className="card">
+          {services.map((service, idx) => (
+            <article key={service.title} className="card fade-up" style={{ animationDelay: `${idx * 120}ms` }}>
               <h2 className="font-display text-2xl text-brand-surface">{service.title}</h2>
               <p className="mt-3 text-sm leading-6 text-brand-muted">{service.detail}</p>
             </article>
@@ -42,10 +62,8 @@ export default function AviationPage() {
         </div>
       </section>
 
-      <ImageStrip title="Aviation Infrastructure Visuals" images={pexelsImages.aviation} />
-
       <section className="section-wrap pt-0">
-        <div className="card flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="card flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between fade-up">
           <h3 className="font-display text-3xl text-brand-surface">Deploy a conversion-focused aviation division website.</h3>
           <Link href="/contact" className="cta-button w-fit">
             Start Aviation Build

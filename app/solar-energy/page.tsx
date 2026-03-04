@@ -1,13 +1,36 @@
 import Link from "next/link";
-import { ImageStrip } from "@/components/ImageStrip";
 import { PageHero } from "@/components/PageHero";
+import { ShowcaseSlider } from "@/components/ShowcaseSlider";
 import { pexelsImages } from "@/lib/site-data";
 
-const installations = [
-  { name: "Commercial Rooftop Block", size: "450 kW", outcome: "Reduced monthly grid spend by 38%." },
-  { name: "Industrial Hybrid Power Site", size: "1.8 MW", outcome: "Stable daytime production for core operations." },
-  { name: "Community Mini-Grid", size: "620 kW", outcome: "Reliable electricity for over 200 homes." },
-  { name: "Institutional Campus Retrofit", size: "980 kW", outcome: "Lower demand peaks and improved resilience." },
+const unitInstallations = [
+  { name: "Single-Home Rooftop Kit", size: "3-5 kW", outcome: "Essential daily backup and reduced fuel generator dependence." },
+  { name: "Retail Shop Energy Pack", size: "5-10 kW", outcome: "Stable power for refrigeration, lighting, and POS uptime." },
+  { name: "Office Unit Deployment", size: "10-20 kW", outcome: "Lower monthly energy costs and cleaner daytime operations." },
+  { name: "Residential Estate Pilot", size: "Per Unit Rollout", outcome: "Phase-by-phase installation across households for manageable growth." },
+];
+
+const solarSlides = [
+  {
+    image: pexelsImages.solar[0],
+    title: "Unit-by-Unit Solar Delivery",
+    caption: "Focused deployment model for homes, offices, and SMEs rather than utility-scale assumptions.",
+  },
+  {
+    image: pexelsImages.solar[1],
+    title: "Practical Solar for Daily Operations",
+    caption: "Each installation is scoped to client load profile, budget, and resilience requirements.",
+  },
+  {
+    image: pexelsImages.solar[2],
+    title: "Scalable Without Overstating Size",
+    caption: "The website messaging stays realistic while still presenting quality and professional value.",
+  },
+  {
+    image: pexelsImages.solar[3],
+    title: "Premium Presentation, Grounded Scope",
+    caption: "Strong visuals and clear process communication make a growing company look trustworthy and capable.",
+  },
 ];
 
 export default function SolarEnergyPage() {
@@ -15,20 +38,22 @@ export default function SolarEnergyPage() {
     <>
       <PageHero
         eyebrow="Solar Energy Division"
-        title="Solar project pages built to prove infrastructure competence."
-        subtitle="This division mockup emphasizes installation examples, measurable outcomes, and a strong inquiry flow for new business."
+        title="Premium solar presentation focused on practical unit installations."
+        subtitle="This page now emphasizes realistic, high-quality delivery for homes and businesses in Nigeria rather than large utility-scale claims."
         primaryCta={{ href: "/contact", label: "Book Solar Assessment" }}
         secondaryCta={{ href: "/project-portfolio", label: "Review Solar Portfolio" }}
         image={pexelsImages.heroSolar}
-        imageAlt="Solar panel installation"
+        imageAlt="Rooftop solar setup"
       />
+
+      <ShowcaseSlider slides={solarSlides} label="Solar Visual Story" />
 
       <section className="section-wrap pt-4">
         <div className="card">
-          <h2 className="font-display text-3xl text-brand-surface">Solar Installation Examples</h2>
+          <h2 className="font-display text-3xl text-brand-surface">Unit Installation Packages</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {installations.map((site) => (
-              <article key={site.name} className="rounded-xl border border-brand-line bg-brand-ink/70 p-5">
+            {unitInstallations.map((site) => (
+              <article key={site.name} className="rounded-2xl border border-brand-line bg-[#f7fbff] p-5 fade-up">
                 <p className="text-xs uppercase tracking-[0.18em] text-brand-gold">{site.size}</p>
                 <h3 className="mt-2 text-lg font-semibold text-brand-surface">{site.name}</h3>
                 <p className="mt-2 text-sm text-brand-muted">{site.outcome}</p>
@@ -38,11 +63,9 @@ export default function SolarEnergyPage() {
         </div>
       </section>
 
-      <ImageStrip title="Solar Equipment and Site Visuals" images={pexelsImages.solar} />
-
       <section className="section-wrap pt-0">
-        <div className="card flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <h3 className="font-display text-3xl text-brand-surface">Turn solar capability into consistent inbound opportunities.</h3>
+        <div className="card flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between fade-up">
+          <h3 className="font-display text-3xl text-brand-surface">Market realistic scale with premium confidence and design quality.</h3>
           <Link href="/contact" className="cta-button w-fit">
             Start Solar Web Suite
           </Link>
