@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-ink: #f4f8fc;
+  --brand-panel: #ffffff;
+  --brand-muted: #5e6f87;
+  --brand-line: #d6e0ec;
+  --brand-surface: #14253f;
+  --brand-accent: #0e87b8;
+  --brand-gold: #b57c2f;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-panel: var(--brand-panel);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-line: var(--brand-line);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-gold: var(--brand-gold);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-wrap {
+  @apply mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10;
+}
+
+.card {
+  @apply rounded-2xl border border-brand-line bg-brand-panel p-6 shadow-[0_18px_45px_-34px_rgba(10,40,80,0.35)];
+}
+
+.kicker {
+  @apply inline-flex rounded-full border border-brand-accent/35 bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent;
+}
+
+.cta-button {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0b74a0];
+}
+
+.cta-outline {
+  @apply inline-flex items-center justify-center rounded-full border border-brand-line px-6 py-3 text-sm font-semibold text-brand-surface transition hover:border-brand-accent hover:text-brand-accent;
 }

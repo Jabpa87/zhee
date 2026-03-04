@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZHEE Ecosystem Mock Website
 
-## Getting Started
+Modern proposal mockup for a multi-venture company ecosystem built with Next.js + Tailwind CSS.
 
-First, run the development server:
+## Founder Personalization
+This mockup is personalized for **Mr. Ngozi Christopher Faith** as **Founder and CEO of ZHEE Aviation**.
 
+## Stack
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS v4
+
+## Pages
+- Home
+- About the Founder
+- Aviation Division
+- Solar Energy Division
+- Engineering Projects
+- Project Portfolio
+- Contact
+
+## Image Strategy
+- Uses online images from `images.pexels.com`
+- Curated for equipment, facilities, infrastructure, and rooms
+- No people-focused visuals
+
+## Run Locally
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open `http://localhost:3000`.
+
+## Verification
+```bash
+npm run lint
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Files
+- `lib/site-data.ts` (founder data + image sources)
+- `app/layout.tsx` (shared shell + metadata)
+- `app/globals.css` (theme, utility classes, UI tokens)
+- `components/Navbar.tsx` (responsive navigation)
+- `components/PageHero.tsx` (reusable hero + CTA + image)
+- `components/ImageStrip.tsx` (gallery strip component)
+- `components/Footer.tsx` (site-wide credibility + CTA)
+- `app/page.tsx` (home + founder context + gallery)
+- `app/about-founder/page.tsx`
+- `app/aviation/page.tsx`
+- `app/solar-energy/page.tsx`
+- `app/engineering-projects/page.tsx`
+- `app/project-portfolio/page.tsx`
+- `app/contact/page.tsx`
