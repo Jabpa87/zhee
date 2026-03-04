@@ -1,23 +1,19 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "ZHEE Ecosystem | Multi-Venture Company",
+  title: "ZHEE Ecosystem | Premium Aviation-Led Services",
   description:
-    "Proposal mockup website for ZHEE's aviation, solar, engineering, and media-led project ecosystem.",
+    "Proposal mockup website for ZHEE's aviation, solar, engineering, and project ecosystem with premium conversion-focused UX.",
 };
 
 export default function RootLayout({
@@ -27,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${playfair.variable} bg-brand-ink text-brand-surface antialiased`}>
+      <body className={`${poppins.variable} bg-brand-ink text-brand-surface antialiased`}>
         <div className="relative min-h-screen overflow-x-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,#0e87b81f,transparent_42%),radial-gradient(circle_at_80%_8%,#d9972d2e,transparent_38%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,#1f4dff22,transparent_38%),radial-gradient(circle_at_90%_10%,#d4af3730,transparent_30%)]" />
           <Navbar />
           <main className="relative z-10">{children}</main>
           <Footer />

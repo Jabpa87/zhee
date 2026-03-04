@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --brand-ink: #f8fbff;
-  --brand-panel: #ffffff;
-  --brand-muted: #58708e;
-  --brand-line: #d8e3ef;
-  --brand-surface: #0f2748;
-  --brand-accent: #0b84b4;
-  --brand-gold: #bb7f2e;
+  --brand-ink: #05070c;
+  --brand-panel: #0b1220;
+  --brand-muted: #b8c1d7;
+  --brand-line: #1f325e;
+  --brand-surface: #f8f8fc;
+  --brand-accent: #2d5bff;
+  --brand-gold: #d4af37;
 }
 
 @theme inline {
@@ -18,8 +18,8 @@
   --color-brand-surface: var(--brand-surface);
   --color-brand-accent: var(--brand-accent);
   --color-brand-gold: var(--brand-gold);
-  --font-sans: var(--font-manrope);
-  --font-display: var(--font-playfair);
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-poppins);
 }
 
 * {
@@ -42,19 +42,19 @@ a {
 }
 
 .card {
-  @apply rounded-3xl border border-brand-line bg-brand-panel p-6 shadow-[0_30px_70px_-45px_rgba(9,32,70,0.45)];
+  @apply rounded-3xl border border-brand-line/70 bg-brand-panel/85 p-6 shadow-[0_30px_70px_-45px_rgba(45,91,255,0.7)];
 }
 
 .kicker {
-  @apply inline-flex rounded-full border border-brand-accent/40 bg-brand-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent;
+  @apply inline-flex rounded-full border border-brand-gold/40 bg-brand-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold;
 }
 
 .cta-button {
-  @apply inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#076a90];
+  @apply inline-flex items-center justify-center rounded-full bg-brand-gold px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#e3c45c];
 }
 
 .cta-outline {
-  @apply inline-flex items-center justify-center rounded-full border border-brand-line px-6 py-3 text-sm font-semibold text-brand-surface transition hover:border-brand-accent hover:text-brand-accent;
+  @apply inline-flex items-center justify-center rounded-full border border-brand-surface/35 px-6 py-3 text-sm font-semibold text-brand-surface transition hover:border-brand-gold hover:text-brand-gold;
 }
 
 .hero-glow {
@@ -73,7 +73,7 @@ a {
 .hero-glow::before {
   width: 220px;
   height: 220px;
-  background: #0b84b433;
+  background: #2d5bff3d;
   top: -40px;
   right: -30px;
   animation: floatY 7s ease-in-out infinite;
@@ -82,7 +82,7 @@ a {
 .hero-glow::after {
   width: 160px;
   height: 160px;
-  background: #bb7f2e30;
+  background: #d4af3738;
   bottom: -20px;
   left: -10px;
   animation: floatY 9s ease-in-out infinite reverse;
